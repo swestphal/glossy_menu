@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        * {
+            padding:0;
+            margin:0;
+        }
+
+        body {
+            min-width:800px;
+        }
+
+        .nav_wrapper {
+            background-color:lavenderblush;
+            height:30px;
+            position:relative;
+            top:70px;
+        }
+
+        .nav_container {
+            position:relative;
+            top:-45px;
+            width:60%;
+            margin:50px auto 0;
+        }
+
+        ul.nav {
+            width:100%;
+            font-size:0;
+        }
+
+        ul.nav li {
+            width:15%;
+            display:inline-block;
+            margin-right:13.33333333333333%;
+            font-size:20px;
+        }
+
+        ul.nav li:last-child{
+            margin-right:0;
+        }
+
+        ul.nav li.nav_element a{
+            top:0px;
+            display: inline-block;
+            position:relative;
+            width:100%;
+            padding:15% 18%;
+            text-align: center;
+            color:midnightblue;
+            text-shadow:0 1px  1px ivory;
+            text-decoration: none;
+            border-radius:5px 5px 5px 5px;
+            background: -webkit-gradient(linear,left bottom,left top,color-stop(0.4, lightskyblue),color-stop(0.55, powderblue));
+            background: -moz-gradient(linear,left bottom,left top,color-stop(0.4, lightskyblue),color-stop(0.55, powderblue));
+            background: -o-gradient(linear,left bottom,left top,color-stop(0.4, lightskyblue),color-stop(0.55, powderblue));
+            background:linear-gradient(left bottom,left top,0.4 lightskyblue,0.55, powderblue);
+            -webkit-box-shadow: 0 0 20px steelblue inset, 0 0 30px lightskyblue inset, 0 0 2px darkblue;
+            -moz-box-shadow: 0 0 20px steelblue inset, 0 0 30px lightskyblue inset, 0 0 2px darkblue;
+            -o-box-shadow: 0 0 20px steelblue inset, 0 0 30px lightskyblue inset, 0 0 2px darkblue;
+            box-shadow: 0 0 20px steelblue inset, 0 0 30px lightskyblue inset, 0 0 2px darkblue;
+            -webkit-transition: transform .3s ease-in-out;
+            -moz--transition: transform .3s ease-in-out;
+            -o--transition: transform .3s ease-in-out;
+            transition: transform .3s ease-in-out;
+            z-index:5;
+        }
+
+        ul.nav li.nav_element a:before{
+            content:"";
+            position:absolute;
+            width:calc(100% + 14px);
+            height:4px;
+
+            background:#aaa;
+            bottom:-4px;
+            left:-7px;
+
+            -webkit-box-shadow:0 0 5px #bbb, 0 0 10px #aaa, 0 0 15px #888;
+            -moz-box-shadow:0 0 5px #bbb, 0 0 10px #aaa, 0 0 15px #888;
+            -o-box-shadow:0 0 5px #bbb, 0 0 10px #aaa, 0 0 15px #888;
+            box-shadow:0 0 5px #bbb, 0 0 10px #aaa, 0 0 15px #888;
+
+            z-index:-1;
+            -webkit-transition: all .3s ease-in-out;
+            -moz-transition: all .3s ease-in-out;
+            -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+            border-radius:75px/4px;
+        }
+
+        ul.nav li.nav_element a:after {
+            content:"";
+            position:absolute;
+            width:100%;
+
+            height:2px;
+            left:0%;
+            background:#777;
+            bottom:-3px;
+            -webkit-box-shadow:0 0 6px #aaa, 0 0 10px #fff, 0 0 14px #777;
+            -moz-box-shadow:0 0 6px #aaa, 0 0 10px #fff, 0 0 14px #777;
+            -o-box-shadow:0 0 6px #aaa, 0 0 10px #fff, 0 0 14px #777;
+            box-shadow:0 0 6px #aaa, 0 0 10px #fff, 0 0 14px #777;
+            z-index:-1;
+            -webkit-transition: all .3s ease-in-out;
+            -moz-transition: all .3s ease-in-out;
+            -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+            border-radius:60px/2px;
+            }
+
+
+
+
+        ul.nav li.nav_element a:hover {
+            -webkit-transform:translate(0,-6px);
+            -moz-transform:translate(0,-6px);
+            -o-transform:translate(0,-6px);
+            transform:translate(0,-6px);
+
+            background: -webkit-gradient(linear,left bottom,left top,color-stop(0.4, violet),color-stop(0.55, thistle));
+            background: -moz-gradient(linear,left bottom,left top,color-stop(0.4, violet),color-stop(0.55, thistle));
+            background: -o-gradient(linear,left bottom,left top,color-stop(0.4, violet),color-stop(0.55, thistle));
+            background: linear-gradient(linear,left bottom,left top,0.4 violet, 0.55 thistle);
+
+
+            -webkit-box-shadow: 0 0 30px mediumvioletred inset, 0 0 30px fuchsia inset, 0 0 2px deeppink;
+            -moz-box-shadow: 0 0 30px mediumvioletred inset, 0 0 30px fuchsia inset, 0 0 2px deeppink;
+            -o-box-shadow: 0 0 30px mediumvioletred inset, 0 0 30px fuchsia inset, 0 0 2px deeppink;
+            box-shadow: 0 0 30px mediumvioletred inset, 0 0 30px fuchsia inset, 0 0 2px deeppink;
+            color:navy;
+            text-shadow:0 1px 1px ivory;
+        }
+
+        ul.nav li.nav_element a:hover:before {
+            bottom:-14px;
+            padding:0 1px;
+            left:-.5px;
+            height:2px;
+            background:#ccc;
+            -webkit-box-shadow:0 0  15px #ccc;
+            -moz-box-shadow:0 0  15px #ccc;
+            -o-box-shadow:0 0  15px #ccc;
+            box-shadow:0 0  15px #ccc;
+            width:100%;
+        }
+
+        ul.nav li.nav_element a:hover:after {
+            bottom:-14px;
+            height:5px;
+            padding:0 1px;
+            left:-.5px;
+            background:#ccc;
+            -webkit-box-shadow:0 0  6px #999;
+            -moz-box-shadow:0 0  6px #999;
+            -o-box-shadow:0 0  6px #999;
+            box-shadow:0 0  6px #999;
+
+            width:100%;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="nav_wrapper">
+    <div class="nav_container">
+        <ul class="nav">
+            <li class="nav_element"><a href="#">Home</a></li>
+            <li class="nav_element"><a href="#">Service</a></li>
+            <li class="nav_element"><a href="#">Referenzen</a></li>
+            <li class="nav_element"><a href="#">Kontakt</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</body>
+</html>
